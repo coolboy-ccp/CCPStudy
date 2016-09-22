@@ -1,0 +1,6 @@
+framework module Pods_CCPStudy {
+  umbrella header "Pods-CCPStudy-umbrella.h"
+
+  export *
+  module * { export * }
+}
