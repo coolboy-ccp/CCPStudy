@@ -1,0 +1,323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=TcLu_VRYP-hjFEuOQ-7LRL7nW7QGyV_7JTjhUjBtzsY1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/BOOK/bundle-BOOK.css?v=fWz3cvIoU0CG8iD-sCmV803XvYIy-SbgoBMZsoVHw9M1"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/wendingding/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/wendingding/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/wendingding/wlwmanifest.xml"/>
+<script src="//common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'wendingding', cb_enable_mathjax=true;var isLogined=false;</script>
+<script src="/bundles/blog-common.js?v=rKI0NabnzxvvIBSzdFCwCxsGpkUGi7MXq4LeVEtss3c1" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<script type="text/javascript">
+	try {
+		if (screen.availWidth > 1200) {
+			document.getElementById("MainCss").href = '/Skins/BOOK/style2.css';
+		}
+	} catch (e) { }
+</script>
+
+<div id="header">
+<div id="HeaderTitle">
+<div id="Title">
+<a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/wendingding/">文顶顶</a>
+</div>
+<div id="subTitle">最怕你一生碌碌无为 还安慰自己平凡可贵</div>
+</div>
+</div>
+
+<div id="main">
+	
+<div id="post_detail">
+	<div class="post">
+		<h2>
+			<a id="cb_post_title_url" href="http://www.cnblogs.com/wendingding/p/3800961.html">iOS开发UI篇—CAlayer（自定义layer）</a>
+		</h2>
+		<div id="cnblogs_post_body"><p><strong>iOS开发UI篇&mdash;CAlayer（自定义layer）</strong></p>
+<p><strong>一、第一种方式</strong></p>
+<p>1.简单说明</p>
+<p style="margin-left: 30px;">以前想要在view中画东西，需要自定义view,创建一个类与之关联，让这个类继承自UIView，然后重写它的DrawRect：方法，然后在该方法中画图。</p>
+<div style="margin-left: 30px;">绘制图形的步骤：</div>
+<div style="margin-left: 60px;"><span style="background-color: #33cccc;">（1）获取上下文</span></div>
+<div style="margin-left: 60px;"><span style="background-color: #33cccc;">（2）绘制图形</span></div>
+<div style="margin-left: 60px;"><span style="background-color: #33cccc;">（3）渲染图形</span></div>
+<div style="margin-left: 30px;">&nbsp;</div>
+<div style="margin-left: 30px;">如果在layer上画东西，与上面的过程类似。</div>
+<div style="margin-left: 30px;">代码示例：</div>
+<div style="margin-left: 30px;">新建一个类，让该类继承自CALayer</div>
+<div style="margin-left: 60px;"><img src="http://images.cnitblog.com/i/450136/201406/211357480518202.png" alt="" /></div>
+<div style="margin-left: 30px;">YYMylayer.m文件</div>
+<div style="margin-left: 30px;">
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #008000;">//</span>
+<span style="color: #008080;"> 2</span> <span style="color: #008000;">//</span><span style="color: #008000;">  YYMylayer.m
+</span><span style="color: #008080;"> 3</span> <span style="color: #008000;">//</span><span style="color: #008000;">  05-自定义layer(1)
+</span><span style="color: #008080;"> 4</span> <span style="color: #008000;">//</span>
+<span style="color: #008080;"> 5</span> <span style="color: #008000;">//</span><span style="color: #008000;">  Created by apple on 14-6-21.
+</span><span style="color: #008080;"> 6</span> <span style="color: #008000;">//</span><span style="color: #008000;">  Copyright (c) 2014年 itcase. All rights reserved.
+</span><span style="color: #008080;"> 7</span> <span style="color: #008000;">//
+</span><span style="color: #008080;"> 8</span> 
+<span style="color: #008080;"> 9</span> <span style="color: #0000ff;">#import</span> <span style="color: #800000;">"</span><span style="color: #800000;">YYMylayer.h</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">10</span> 
+<span style="color: #008080;">11</span> <span style="color: #0000ff;">@implementation</span><span style="color: #000000;"> YYMylayer
+</span><span style="color: #008080;">12</span> <span style="color: #008000;">//</span><span style="color: #008000;">重写该方法，在该方法内绘制图形</span>
+<span style="color: #008080;">13</span> -(<span style="color: #0000ff;">void</span><span style="color: #000000;">)drawInContext:(CGContextRef)ctx
+</span><span style="color: #008080;">14</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">15</span>     <span style="color: #008000;">//</span><span style="color: #008000;">1.绘制图形
+</span><span style="color: #008080;">16</span>     <span style="color: #008000;">//</span><span style="color: #008000;">画一个圆</span>
+<span style="color: #008080;">17</span>     CGContextAddEllipseInRect(ctx, CGRectMake(<span style="color: #800080;">50</span>, <span style="color: #800080;">50</span>, <span style="color: #800080;">100</span>, <span style="color: #800080;">100</span><span style="color: #000000;">));
+</span><span style="color: #008080;">18</span>     <span style="color: #008000;">//</span><span style="color: #008000;">设置属性（颜色）
+</span><span style="color: #008080;">19</span> <span style="color: #008000;">//</span><span style="color: #008000;">    [[UIColor yellowColor]set];</span>
+<span style="color: #008080;">20</span>     CGContextSetRGBFillColor(ctx, <span style="color: #800080;">0</span>, <span style="color: #800080;">0</span>, <span style="color: #800080;">1</span>, <span style="color: #800080;">1</span><span style="color: #000000;">);
+</span><span style="color: #008080;">21</span>     
+<span style="color: #008080;">22</span>     <span style="color: #008000;">//</span><span style="color: #008000;">2.渲染</span>
+<span style="color: #008080;">23</span> <span style="color: #000000;">    CGContextFillPath(ctx);
+</span><span style="color: #008080;">24</span> <span style="color: #000000;">}
+</span><span style="color: #008080;">25</span> <span style="color: #0000ff;">@end</span></pre>
+</div>
+</div>
+<div style="margin-left: 30px;">在控制器中，创建一个自定义的类</div>
+<div style="margin-left: 30px;">
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #008000;">//</span>
+<span style="color: #008080;"> 2</span> <span style="color: #008000;">//</span><span style="color: #008000;">  YYViewController.m
+</span><span style="color: #008080;"> 3</span> <span style="color: #008000;">//</span><span style="color: #008000;">  05-自定义layer(1)
+</span><span style="color: #008080;"> 4</span> <span style="color: #008000;">//</span>
+<span style="color: #008080;"> 5</span> <span style="color: #008000;">//</span><span style="color: #008000;">  Created by apple on 14-6-21.
+</span><span style="color: #008080;"> 6</span> <span style="color: #008000;">//</span><span style="color: #008000;">  Copyright (c) 2014年 itcase. All rights reserved.
+</span><span style="color: #008080;"> 7</span> <span style="color: #008000;">//
+</span><span style="color: #008080;"> 8</span> 
+<span style="color: #008080;"> 9</span> <span style="color: #0000ff;">#import</span> <span style="color: #800000;">"</span><span style="color: #800000;">YYViewController.h</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">10</span> <span style="color: #0000ff;">#import</span> <span style="color: #800000;">"</span><span style="color: #800000;">YYMylayer.h</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">11</span> 
+<span style="color: #008080;">12</span> <span style="color: #0000ff;">@interface</span><span style="color: #000000;"> YYViewController ()
+</span><span style="color: #008080;">13</span> 
+<span style="color: #008080;">14</span> <span style="color: #0000ff;">@end</span>
+<span style="color: #008080;">15</span> 
+<span style="color: #008080;">16</span> <span style="color: #0000ff;">@implementation</span><span style="color: #000000;"> YYViewController
+</span><span style="color: #008080;">17</span> 
+<span style="color: #008080;">18</span> - (<span style="color: #0000ff;">void</span><span style="color: #000000;">)viewDidLoad
+</span><span style="color: #008080;">19</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">20</span> <span style="color: #000000;">    [super viewDidLoad];
+</span><span style="color: #008080;">21</span>     
+<span style="color: #008080;">22</span>     <span style="color: #008000;">//</span><span style="color: #008000;">1.创建自定义的layer</span>
+<span style="color: #008080;">23</span>     YYMylayer *layer=<span style="color: #000000;">[YYMylayer layer];
+</span><span style="color: #008080;">24</span>     <span style="color: #008000;">//</span><span style="color: #008000;">2.设置layer的属性</span>
+<span style="color: #008080;">25</span>     layer.backgroundColor=<span style="color: #000000;">[UIColor brownColor].CGColor;
+</span><span style="color: #008080;">26</span>     layer.bounds=CGRectMake(<span style="color: #800080;">0</span>, <span style="color: #800080;">0</span>, <span style="color: #800080;">200</span>, <span style="color: #800080;">150</span><span style="color: #000000;">);
+</span><span style="color: #008080;">27</span>     layer.anchorPoint=<span style="color: #000000;">CGPointZero;
+</span><span style="color: #008080;">28</span>     layer.position=CGPointMake(<span style="color: #800080;">100</span>, <span style="color: #800080;">100</span><span style="color: #000000;">);
+</span><span style="color: #008080;">29</span>     layer.cornerRadius=<span style="color: #800080;">20</span><span style="color: #000000;">;
+</span><span style="color: #008080;">30</span>     layer.shadowColor=<span style="color: #000000;">[UIColor blackColor].CGColor;
+</span><span style="color: #008080;">31</span>     layer.shadowOffset=CGSizeMake(<span style="color: #800080;">10</span>, <span style="color: #800080;">20</span><span style="color: #000000;">);
+</span><span style="color: #008080;">32</span>     layer.shadowOpacity=<span style="color: #800080;">0.6</span><span style="color: #000000;">;
+</span><span style="color: #008080;">33</span>     
+<span style="color: #008080;">34</span> <span style="color: #000000;">    [layer setNeedsDisplay];
+</span><span style="color: #008080;">35</span>     <span style="color: #008000;">//</span><span style="color: #008000;">3.添加layer</span>
+<span style="color: #008080;">36</span> <span style="color: #000000;">    [self.view.layer addSublayer:layer];
+</span><span style="color: #008080;">37</span>     
+<span style="color: #008080;">38</span> <span style="color: #000000;">}
+</span><span style="color: #008080;">39</span> 
+<span style="color: #008080;">40</span> <span style="color: #0000ff;">@end</span></pre>
+</div>
+</div>
+<div style="margin-left: 30px;"><span style="background-color: #ff0000;">注意点：</span></div>
+<div style="margin-left: 30px;">（1）默认为无色，不会显示。要想让绘制的图形显示出来，还需要设置图形的颜色。注意不能直接使用UI框架中的类</div>
+<div style="margin-left: 30px;">（2）在自定义layer中的-(void)drawInContext:方法不会自己调用，只能自己通过setNeedDisplay方法调用，在view中画东西DrawRect:方法在view第一次显示的时候会自动调用。</div>
+<div style="margin-left: 30px;">实现效果：</div>
+<div style="margin-left: 60px;"><img src="http://images.cnitblog.com/i/450136/201406/211400455205519.png" alt="" width="226" height="345" /></div>
+<div>2.拓展</div>
+<div>　　UIView中绘图说明</div>
+<div>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #0000ff;">#import</span> <span style="color: #800000;">"</span><span style="color: #800000;">YYVIEW.h</span><span style="color: #800000;">"</span>
+<span style="color: #008080;"> 2</span> 
+<span style="color: #008080;"> 3</span> <span style="color: #0000ff;">@implementation</span><span style="color: #000000;"> YYVIEW
+</span><span style="color: #008080;"> 4</span> 
+<span style="color: #008080;"> 5</span> 
+<span style="color: #008080;"> 6</span> - (<span style="color: #0000ff;">void</span><span style="color: #000000;">)drawRect:(CGRect)rect
+</span><span style="color: #008080;"> 7</span> <span style="color: #000000;">{
+</span><span style="color: #008080;"> 8</span>     <span style="color: #008000;">//</span><span style="color: #008000;">1.获取上下文</span>
+<span style="color: #008080;"> 9</span>     CGContextRef ctx=<span style="color: #000000;">UIGraphicsGetCurrentContext();
+</span><span style="color: #008080;">10</span>     <span style="color: #008000;">//</span><span style="color: #008000;">2.绘制图形</span>
+<span style="color: #008080;">11</span>     CGContextAddEllipseInRect(ctx, CGRectMake(<span style="color: #800080;">50</span>, <span style="color: #800080;">50</span>, <span style="color: #800080;">100</span>, <span style="color: #800080;">100</span><span style="color: #000000;">));
+</span><span style="color: #008080;">12</span>     <span style="color: #008000;">//</span><span style="color: #008000;">设置属性（颜色）
+</span><span style="color: #008080;">13</span>     <span style="color: #008000;">//</span><span style="color: #008000;">    [[UIColor yellowColor]set];</span>
+<span style="color: #008080;">14</span>     CGContextSetRGBFillColor(ctx, <span style="color: #800080;">0</span>, <span style="color: #800080;">0</span>, <span style="color: #800080;">1</span>, <span style="color: #800080;">1</span><span style="color: #000000;">);
+</span><span style="color: #008080;">15</span>     
+<span style="color: #008080;">16</span>     <span style="color: #008000;">//</span><span style="color: #008000;">3.渲染</span>
+<span style="color: #008080;">17</span> <span style="color: #000000;">    CGContextFillPath(ctx);
+</span><span style="color: #008080;">18</span>     <span style="color: #008000;">//</span><span style="color: #008000;">在执行渲染操作的时候，本质上它的内部相当于调用了下面的方法</span>
+<span style="color: #008080;">19</span> <span style="color: #000000;">    [self.layer drawInContext:ctx];
+</span><span style="color: #008080;">20</span> }</pre>
+</div>
+<p><span style="background-color: #33cccc;">说明</span>：在UIView中绘制图形，获取的上下文就是这个view对应的layer的上下文。在渲染的时候，就是把图形渲染到对应的layer上。</p>
+<p style="margin-left: 30px;">&nbsp; 在执行渲染操作的时候，本质上它的内部相当于执行了&nbsp;[self.layer drawInContext:ctx];</p>
+<p style="margin-left: 30px;">&nbsp;</p>
+<p><strong>二、第二种方式</strong></p>
+<p style="margin-left: 30px;">方法描述：设置CALayer的delegate，然后让delegate实现drawLayer:inContext:方法，当CALayer需要绘图时，会调用delegate的drawLayer:inContext:方法进行绘图。</p>
+<p style="margin-left: 30px;">代码示例：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #008000;">//</span>
+<span style="color: #008080;"> 2</span> <span style="color: #008000;">//</span><span style="color: #008000;">  YYViewController.m
+</span><span style="color: #008080;"> 3</span> <span style="color: #008000;">//</span><span style="color: #008000;">  06-自定义layer(2)
+</span><span style="color: #008080;"> 4</span> <span style="color: #008000;">//</span>
+<span style="color: #008080;"> 5</span> <span style="color: #008000;">//</span><span style="color: #008000;">  Created by apple on 14-6-21.
+</span><span style="color: #008080;"> 6</span> <span style="color: #008000;">//</span><span style="color: #008000;">  Copyright (c) 2014年 itcase. All rights reserved.</span>
+<span style="color: #008080;"> 7</span> 
+<span style="color: #008080;"> 8</span> <span style="color: #0000ff;">#import</span> <span style="color: #800000;">"</span><span style="color: #800000;">YYViewController.h</span><span style="color: #800000;">"</span>
+<span style="color: #008080;"> 9</span> <span style="color: #0000ff;">@interface</span><span style="color: #000000;"> YYViewController ()
+</span><span style="color: #008080;">10</span> <span style="color: #0000ff;">@end</span>
+<span style="color: #008080;">11</span> 
+<span style="color: #008080;">12</span> <span style="color: #0000ff;">@implementation</span><span style="color: #000000;"> YYViewController
+</span><span style="color: #008080;">13</span> 
+<span style="color: #008080;">14</span> - (<span style="color: #0000ff;">void</span><span style="color: #000000;">)viewDidLoad
+</span><span style="color: #008080;">15</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">16</span> <span style="color: #000000;">    [super viewDidLoad];
+</span><span style="color: #008080;">17</span>     <span style="color: #008000;">//</span><span style="color: #008000;">1.创建自定义的layer</span>
+<span style="color: #008080;">18</span>     CALayer *layer=<span style="color: #000000;">[CALayer layer];
+</span><span style="color: #008080;">19</span>     <span style="color: #008000;">//</span><span style="color: #008000;">2.设置layer的属性</span>
+<span style="color: #008080;">20</span>     layer.backgroundColor=<span style="color: #000000;">[UIColor brownColor].CGColor;
+</span><span style="color: #008080;">21</span>     layer.bounds=CGRectMake(<span style="color: #800080;">0</span>, <span style="color: #800080;">0</span>, <span style="color: #800080;">200</span>, <span style="color: #800080;">150</span><span style="color: #000000;">);
+</span><span style="color: #008080;">22</span>     layer.anchorPoint=<span style="color: #000000;">CGPointZero;
+</span><span style="color: #008080;">23</span>     layer.position=CGPointMake(<span style="color: #800080;">100</span>, <span style="color: #800080;">100</span><span style="color: #000000;">);
+</span><span style="color: #008080;">24</span>     layer.cornerRadius=<span style="color: #800080;">20</span><span style="color: #000000;">;
+</span><span style="color: #008080;">25</span>     layer.shadowColor=<span style="color: #000000;">[UIColor blackColor].CGColor;
+</span><span style="color: #008080;">26</span>     layer.shadowOffset=CGSizeMake(<span style="color: #800080;">10</span>, <span style="color: #800080;">20</span><span style="color: #000000;">);
+</span><span style="color: #008080;">27</span>     layer.shadowOpacity=<span style="color: #800080;">0.6</span><span style="color: #000000;">;
+</span><span style="color: #008080;">28</span>     
+<span style="color: #008080;">29</span>     <span style="color: #008000;">//</span><span style="color: #008000;">设置代理</span>
+<span style="color: #008080;">30</span>     layer.<span style="color: #0000ff;">delegate</span>=<span style="color: #000000;">self;
+</span><span style="color: #008080;">31</span> <span style="color: #000000;">    [layer setNeedsDisplay];
+</span><span style="color: #008080;">32</span>     <span style="color: #008000;">//</span><span style="color: #008000;">3.添加layer</span>
+<span style="color: #008080;">33</span> <span style="color: #000000;">    [self.view.layer addSublayer:layer];
+</span><span style="color: #008080;">34</span> <span style="color: #000000;">}
+</span><span style="color: #008080;">35</span> 
+<span style="color: #008080;">36</span> -(<span style="color: #0000ff;">void</span>)drawLayer:(CALayer *<span style="color: #000000;">)layer inContext:(CGContextRef)ctx
+</span><span style="color: #008080;">37</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">38</span>     <span style="color: #008000;">//</span><span style="color: #008000;">1.绘制图形
+</span><span style="color: #008080;">39</span>     <span style="color: #008000;">//</span><span style="color: #008000;">画一个圆</span>
+<span style="color: #008080;">40</span>     CGContextAddEllipseInRect(ctx, CGRectMake(<span style="color: #800080;">50</span>, <span style="color: #800080;">50</span>, <span style="color: #800080;">100</span>, <span style="color: #800080;">100</span><span style="color: #000000;">));
+</span><span style="color: #008080;">41</span>     <span style="color: #008000;">//</span><span style="color: #008000;">设置属性（颜色）
+</span><span style="color: #008080;">42</span>     <span style="color: #008000;">//</span><span style="color: #008000;">    [[UIColor yellowColor]set];</span>
+<span style="color: #008080;">43</span>     CGContextSetRGBFillColor(ctx, <span style="color: #800080;">0</span>, <span style="color: #800080;">0</span>, <span style="color: #800080;">1</span>, <span style="color: #800080;">1</span><span style="color: #000000;">);
+</span><span style="color: #008080;">44</span>     
+<span style="color: #008080;">45</span>     <span style="color: #008000;">//</span><span style="color: #008000;">2.渲染</span>
+<span style="color: #008080;">46</span> <span style="color: #000000;">    CGContextFillPath(ctx);
+</span><span style="color: #008080;">47</span> <span style="color: #000000;">}
+</span><span style="color: #008080;">48</span> <span style="color: #0000ff;">@end</span></pre>
+</div>
+<p style="margin-left: 30px;">实现效果：</p>
+<p style="margin-left: 30px;"><img src="http://images.cnitblog.com/i/450136/201406/211422222862055.png" alt="" width="229" height="350" /></p>
+<p style="margin-left: 30px;"><span style="background-color: #33cccc;">注意点：</span>不能再将某个UIView设置为CALayer的delegate，因为UIView对象已经是它内部根层的delegate，再次设置为其他层的delegate就会出问题。</p>
+<div style="margin-left: 30px;">在设置代理的时候，它并不要求我们遵守协议，说明这个方法是nsobject中的，就不需要再额外的显示遵守协议了。</div>
+<div style="margin-left: 60px;"><img src="http://images.cnitblog.com/i/450136/201406/211424150821981.png" alt="" width="313" height="94" /></div>
+<div style="margin-left: 30px;"><span style="background-color: #ff9900;">提示：</span>以后如果要设置某个类的代理，但是这个代理没要求我们遵守什么特定的协议，那么可以认为这个协议方法是NSObject里边的。</div>
+<div style="margin-left: 30px;">&nbsp;</div>
+<div><strong>三、补充说明</strong></div>
+<div style="margin-left: 30px;">（1）无论采取哪种方法来自定义层，都必须调用CALayer的setNeedsDisplay方法才能正常绘图。</div>
+<div style="margin-left: 30px;">（2）详细现实过程：</div>
+<div style="margin-left: 60px;">当UIView需要显示时，它内部的层会准备好一个CGContextRef(图形上下文)，然后调用delegate(这里就是UIView)的drawLayer:inContext:方法，并且传入已经准备好的CGContextRef对象。而UIView在drawLayer:inContext:方法中又会调用自己的drawRect:方法。平时在drawRect:中通过UIGraphicsGetCurrentContext()获取的就是由层传入的CGContextRef对象，在drawRect:中完成的所有绘图都会填入层的CGContextRef中，然后被拷贝至屏幕。</div>
+</div></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		<p class="postfoot">
+			posted on <span id="post-date">2014-06-21 14:31</span> <a href='http://www.cnblogs.com/wendingding/'>文顶顶</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=3800961" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(3800961);return false;">收藏</a>
+		</p>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=128810,cb_entryId=3800961,cb_blogApp=currentBlogApp,cb_blogUserGuid='19592482-4303-e211-aa3f-842b2b196315',cb_entryCreatedDate='2014/6/21 14:31:00';loadViewCount(cb_entryId);</script>
+	
+	</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<div id='ad_c1' class='c_ad_block'></div>
+<div id='under_post_news'></div>
+<div id='ad_c2' class='c_ad_block'></div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a id="Footer1_Hyperlink3" NAME="Hyperlink1" href="http://www.cnblogs.com/" style="font-family:Verdana;font-size:12px;">博客园</a>
+	<br />
+	Copyright &copy; 文顶顶
+</p>
+</div>
+<div id="rightmenu">
+	
+		<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+		
+<h3>导航</h3>
+<ul>
+			<li><a id="blog_nav_sitehome" href="http://www.cnblogs.com/">博客园</a></li>
+			<li><a id="blog_nav_myhome" href="http://www.cnblogs.com/wendingding/">首页</a></li>
+			<li><a id="blog_nav_newpost" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+			<li><a id="blog_nav_contact" accesskey="9" rel="nofollow" href="https://msg.cnblogs.com/send/%E6%96%87%E9%A1%B6%E9%A1%B6">联系</a></li>
+			<li><a id="blog_nav_rss" href="http://www.cnblogs.com/wendingding/rss">订阅</a><a id="blog_nav_rss_image" href="http://www.cnblogs.com/wendingding/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>
+			<li><a id="blog_nav_admin" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		
+<h3>统计</h3>
+	<ul>
+		<li>随笔 - 178
+		<li>文章 - 0
+		<li>评论 - 1398
+		<li>引用 - 0
+	</li>
+</ul>
+		
+<h3>公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+
+		<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+	
+</div>
+			
+			
+			
+			
+			 
+
+	
+
+</body>
+</html>

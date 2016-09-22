@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +17,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NSp-yz-0WZ"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just for study" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hlh-WT-fys">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By chuchengpeng   2016.09.22" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psh-os-HwM">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hlh-WT-fys" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="80" id="5dT-0w-5d8"/>
+                            <constraint firstItem="Hlh-WT-fys" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6iE-KH-9zi"/>
+                            <constraint firstItem="NSp-yz-0WZ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="c2m-KO-vH7"/>
+                            <constraint firstItem="NSp-yz-0WZ" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="dYM-Be-lee"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="psh-os-HwM" secondAttribute="bottom" constant="30" id="lRe-47-0wq"/>
+                            <constraint firstItem="NSp-yz-0WZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nUe-Qv-I2s"/>
+                            <constraint firstItem="NSp-yz-0WZ" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="q85-DS-wgy"/>
+                            <constraint firstItem="psh-os-HwM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="v9H-BG-xCU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-2" y="127"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first.jpg" width="700" height="1243"/>
+    </resources>
 </document>
