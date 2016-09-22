@@ -12,3 +12,4 @@ pod 'Masonry'
 
 platform :ios, '8.0'
 pod 'RealReachability'
+pod 'MBProgressHUD', '~> 1.0.0'

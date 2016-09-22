@@ -32,7 +32,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="searchNet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wzq-Aq-R3R"/>
+                                    <action selector="searchNet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnL-KD-Zbq"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myf-5H-7YO">
@@ -51,17 +51,29 @@
                                     <constraint firstAttribute="height" constant="80" id="f1J-fl-cpa"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCZ-9H-Z5J">
+                                <color key="backgroundColor" red="0.078431372550000003" green="0.54901960780000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qM9-7g-AbR" firstAttribute="leading" secondItem="4GB-rH-sZy" secondAttribute="leading" id="0hQ-T6-iPD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4GB-rH-sZy" secondAttribute="bottom" constant="50" id="0yh-E1-1Bo"/>
+                            <constraint firstItem="NCZ-9H-Z5J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="1xh-qe-gC3"/>
                             <constraint firstItem="qM9-7g-AbR" firstAttribute="trailing" secondItem="4GB-rH-sZy" secondAttribute="trailing" id="3TG-WJ-2WN"/>
                             <constraint firstItem="Myf-5H-7YO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="4Nd-mY-exW"/>
+                            <constraint firstItem="NCZ-9H-Z5J" firstAttribute="top" secondItem="3XB-oG-Zef" secondAttribute="bottom" constant="40" id="IZE-pN-CX9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3XB-oG-Zef" secondAttribute="trailing" constant="30" id="KOZ-uh-gxp"/>
                             <constraint firstItem="4GB-rH-sZy" firstAttribute="top" secondItem="qM9-7g-AbR" secondAttribute="bottom" constant="5" id="Kxe-YX-laH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4GB-rH-sZy" secondAttribute="trailing" constant="30" id="PY3-H5-n0N"/>
                             <constraint firstItem="3XB-oG-Zef" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Xfi-Kt-zs0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NCZ-9H-Z5J" secondAttribute="trailing" constant="30" id="Xvh-gB-LiV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Myf-5H-7YO" secondAttribute="trailing" constant="30" id="YbV-Wk-o7n"/>
                             <constraint firstItem="3XB-oG-Zef" firstAttribute="top" secondItem="Myf-5H-7YO" secondAttribute="bottom" constant="30" id="Yz1-ap-cXs"/>
                             <constraint firstItem="Myf-5H-7YO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="gYc-0L-A8g"/>
@@ -69,6 +81,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6hG-g3-92e"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="NCZ-9H-Z5J" id="QCK-Nd-xIF"/>
+                        <outlet property="netV" destination="qM9-7g-AbR" id="rGR-Bi-1on"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

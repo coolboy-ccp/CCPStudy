@@ -20,6 +20,7 @@
 		00C5818B1D937C9B0066381C /* Install cocoapods.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00C5818A1D937C9B0066381C /* Install cocoapods.rtf */; };
 		00C5818F1D937FA80066381C /* NetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5818E1D937FA80066381C /* NetView.m */; };
 		00C581921D9380E30066381C /* iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html in Resources */ = {isa = PBXBuildFile; fileRef = 00C581911D9380E30066381C /* iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html */; };
+		00C581981D93C0C70066381C /* LoginVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C581971D93C0C70066381C /* LoginVM.m */; };
 		97A3CAF5BE974C37390C1937 /* Pods_CCPStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9172EA9F8AEC946728CC93DB /* Pods_CCPStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,8 @@
 		00C5818D1D937FA80066381C /* NetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetView.h; sourceTree = "<group>"; };
 		00C5818E1D937FA80066381C /* NetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetView.m; sourceTree = "<group>"; };
 		00C581911D9380E30066381C /* iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html"; sourceTree = "<group>"; };
+		00C581961D93C0C70066381C /* LoginVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVM.h; sourceTree = "<group>"; };
+		00C581971D93C0C70066381C /* LoginVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVM.m; sourceTree = "<group>"; };
 		268833C5C4DC1BEDF148E147 /* Pods-CCPStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCPStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCPStudy/Pods-CCPStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		9172EA9F8AEC946728CC93DB /* Pods_CCPStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCPStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08AF1E2302DE5A54229CDA0 /* Pods-CCPStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCPStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCPStudy/Pods-CCPStudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 		00B633611D936D8500E794E2 /* VModel */ = {
 			isa = PBXGroup;
 			children = (
+				00C581961D93C0C70066381C /* LoginVM.h */,
+				00C581971D93C0C70066381C /* LoginVM.m */,
 			);
 			path = VModel;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 			files = (
 				00C5818F1D937FA80066381C /* NetView.m in Sources */,
 				00C581841D9379800066381C /* LoginViewController.m in Sources */,
+				00C581981D93C0C70066381C /* LoginVM.m in Sources */,
 				00B6332C1D936D1E00E794E2 /* AppDelegate.m in Sources */,
 				00B633641D936D9700E794E2 /* BaseViewController.m in Sources */,
 				00B633291D936D1E00E794E2 /* main.m in Sources */,

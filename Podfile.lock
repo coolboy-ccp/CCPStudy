@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
   - ReactiveCocoa (2.1.8):
     - ReactiveCocoa/Core (= 2.1.8)
     - ReactiveCocoa/no-arc (= 2.1.8)
@@ -30,15 +31,17 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - Masonry
+  - MBProgressHUD (~> 1.0.0)
   - ReactiveCocoa (~> 2.1.8)
   - RealReachability
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
   RealReachability: e6c8a2bbffa316006e8c282efc1ee2567d61a920
 
-PODFILE CHECKSUM: 63b621557da7452164340c4d375a74e6cffb5347
+PODFILE CHECKSUM: 94716fe0bcb4fb0184032057486b571d384d5e7a
 
 COCOAPODS: 1.0.1

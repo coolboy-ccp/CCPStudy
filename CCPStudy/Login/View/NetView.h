@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface NetView : UIView
+    
+    @property (nonatomic,strong) UIColor *color;
 
 @end
