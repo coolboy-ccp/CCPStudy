@@ -33,7 +33,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-    
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    self.loginBtn.layer.mask.bounds = CGRectMake(0, 0, Main_width - 92 , 34);
+}
+
 - (void)setLBtn {
     RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[self.accountTextField.rac_textSignal,self.secretTextField.rac_textSignal] reduce:^(NSString *account, NSString *secret){
         if ((account.length >= 6 && secret.length >= 6)) {
@@ -65,6 +70,8 @@
     }
     self.vm = [[LoginVM alloc] initWithVC:self];
 }
+
+
 
 - (IBAction)searchNet:(UIButton *)sender {
     [GLobalRealReachability startNotifier];
