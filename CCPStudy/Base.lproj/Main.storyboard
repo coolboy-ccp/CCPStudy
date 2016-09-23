@@ -36,12 +36,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myf-5H-7YO">
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Secret" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3XB-oG-Zef">
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                             </textField>
@@ -59,6 +59,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="LoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vdx-a9-UZ7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,13 +85,42 @@
                     </view>
                     <navigationItem key="navigationItem" id="6hG-g3-92e"/>
                     <connections>
+                        <outlet property="accountTextField" destination="Myf-5H-7YO" id="9bo-ie-vYq"/>
                         <outlet property="loginBtn" destination="NCZ-9H-Z5J" id="QCK-Nd-xIF"/>
                         <outlet property="netV" destination="qM9-7g-AbR" id="rGR-Bi-1on"/>
+                        <outlet property="secretTextField" destination="3XB-oG-Zef" id="2cJ-3M-ATe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="599" y="-21"/>
+            <point key="canvasLocation" x="-103" y="-63"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="kbD-EG-rdn">
+            <objects>
+                <viewController storyboardIdentifier="mainStory" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mqn-ar-Sh7" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aV2-Vr-fqM"/>
+                        <viewControllerLayoutGuide type="bottom" id="vb7-Ho-gXB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a9G-em-820">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c3t-a5-kMg"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c3t-a5-kMg" firstAttribute="height" secondItem="a9G-em-820" secondAttribute="height" id="OJR-JZ-Tbd"/>
+                            <constraint firstItem="c3t-a5-kMg" firstAttribute="width" secondItem="a9G-em-820" secondAttribute="width" id="Rcd-dS-CMA"/>
+                            <constraint firstItem="c3t-a5-kMg" firstAttribute="centerY" secondItem="a9G-em-820" secondAttribute="centerY" id="fBP-aG-hHq"/>
+                            <constraint firstItem="c3t-a5-kMg" firstAttribute="centerX" secondItem="a9G-em-820" secondAttribute="centerX" id="vqo-sr-pm6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMl-ZD-r5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="-63"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sJH-La-Hge">
@@ -106,7 +138,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlV-Pa-z3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="777.66116941529242"/>
+            <point key="canvasLocation" x="-842" y="-63"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="main.jpg" width="720" height="1281"/>
+    </resources>
 </document>

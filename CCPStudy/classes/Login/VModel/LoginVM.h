@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface LoginVM : NSObject
-    @property (nonatomic,strong) NSString *account;
-    @property (nonatomic,strong) NSString *secret;
-
+@property (nonatomic,strong) NSString *account;
+@property (nonatomic,strong) NSString *secret;
+@property (nonatomic,strong) NSString *loginStatus;
+- (instancetype)initWithVC:(UIViewController *)vc;
 @end

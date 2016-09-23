@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000E12441D94D45300ADFBE7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E12381D94D45300ADFBE7 /* LoginViewController.m */; };
+		000E12451D94D45300ADFBE7 /* NetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E123B1D94D45300ADFBE7 /* NetView.m */; };
+		000E12461D94D45300ADFBE7 /* LoginVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E123E1D94D45300ADFBE7 /* LoginVM.m */; };
+		000E12491D94D49300ADFBE7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E12481D94D49300ADFBE7 /* MainViewController.m */; };
+		000E124B1D94DD9D00ADFBE7 /* main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 000E124A1D94DD9D00ADFBE7 /* main.jpg */; };
 		00B633291D936D1E00E794E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B633281D936D1E00E794E2 /* main.m */; };
 		00B6332C1D936D1E00E794E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B6332B1D936D1E00E794E2 /* AppDelegate.m */; };
 		00B633321D936D1E00E794E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B633301D936D1E00E794E2 /* Main.storyboard */; };
@@ -15,12 +20,9 @@
 		00B633421D936D1E00E794E2 /* CCPStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B633411D936D1E00E794E2 /* CCPStudyTests.m */; };
 		00B6334D1D936D1E00E794E2 /* CCPStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B6334C1D936D1E00E794E2 /* CCPStudyUITests.m */; };
 		00B633641D936D9700E794E2 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B633631D936D9700E794E2 /* BaseViewController.m */; };
-		00C581841D9379800066381C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C581831D9379800066381C /* LoginViewController.m */; };
 		00C581891D937B720066381C /* first.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00C581881D937B720066381C /* first.jpg */; };
 		00C5818B1D937C9B0066381C /* Install cocoapods.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00C5818A1D937C9B0066381C /* Install cocoapods.rtf */; };
-		00C5818F1D937FA80066381C /* NetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5818E1D937FA80066381C /* NetView.m */; };
 		00C581921D9380E30066381C /* iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html in Resources */ = {isa = PBXBuildFile; fileRef = 00C581911D9380E30066381C /* iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html */; };
-		00C581981D93C0C70066381C /* LoginVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C581971D93C0C70066381C /* LoginVM.m */; };
 		97A3CAF5BE974C37390C1937 /* Pods_CCPStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9172EA9F8AEC946728CC93DB /* Pods_CCPStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000E12371D94D45300ADFBE7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		000E12381D94D45300ADFBE7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		000E123A1D94D45300ADFBE7 /* NetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetView.h; sourceTree = "<group>"; };
+		000E123B1D94D45300ADFBE7 /* NetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetView.m; sourceTree = "<group>"; };
+		000E123D1D94D45300ADFBE7 /* LoginVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVM.h; sourceTree = "<group>"; };
+		000E123E1D94D45300ADFBE7 /* LoginVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVM.m; sourceTree = "<group>"; };
+		000E12471D94D49300ADFBE7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		000E12481D94D49300ADFBE7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		000E124A1D94DD9D00ADFBE7 /* main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main.jpg; sourceTree = "<group>"; };
 		00B633241D936D1E00E794E2 /* CCPStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCPStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B633281D936D1E00E794E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00B6332A1D936D1E00E794E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,15 +72,9 @@
 		00B633671D936E1300E794E2 /* LocalConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalConstant.h; sourceTree = "<group>"; };
 		00B633681D936E7A00E794E2 /* NetConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetConstant.h; sourceTree = "<group>"; };
 		00C581811D9378820066381C /* CCPStudy.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPStudy.pch; sourceTree = "<group>"; };
-		00C581821D9379800066381C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		00C581831D9379800066381C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		00C581881D937B720066381C /* first.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = first.jpg; sourceTree = "<group>"; };
 		00C5818A1D937C9B0066381C /* Install cocoapods.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Install cocoapods.rtf"; sourceTree = "<group>"; };
-		00C5818D1D937FA80066381C /* NetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetView.h; sourceTree = "<group>"; };
-		00C5818E1D937FA80066381C /* NetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetView.m; sourceTree = "<group>"; };
 		00C581911D9380E30066381C /* iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html"; sourceTree = "<group>"; };
-		00C581961D93C0C70066381C /* LoginVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVM.h; sourceTree = "<group>"; };
-		00C581971D93C0C70066381C /* LoginVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVM.m; sourceTree = "<group>"; };
 		268833C5C4DC1BEDF148E147 /* Pods-CCPStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCPStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCPStudy/Pods-CCPStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		9172EA9F8AEC946728CC93DB /* Pods_CCPStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCPStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08AF1E2302DE5A54229CDA0 /* Pods-CCPStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCPStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCPStudy/Pods-CCPStudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +106,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000E12331D94D45300ADFBE7 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				000E12341D94D45300ADFBE7 /* Login */,
+				000E123F1D94D45300ADFBE7 /* Main */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		000E12341D94D45300ADFBE7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				000E12351D94D45300ADFBE7 /* Model */,
+				000E12361D94D45300ADFBE7 /* VC */,
+				000E12391D94D45300ADFBE7 /* View */,
+				000E123C1D94D45300ADFBE7 /* VModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		000E12351D94D45300ADFBE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		000E12361D94D45300ADFBE7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				000E12371D94D45300ADFBE7 /* LoginViewController.h */,
+				000E12381D94D45300ADFBE7 /* LoginViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		000E12391D94D45300ADFBE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				000E123A1D94D45300ADFBE7 /* NetView.h */,
+				000E123B1D94D45300ADFBE7 /* NetView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		000E123C1D94D45300ADFBE7 /* VModel */ = {
+			isa = PBXGroup;
+			children = (
+				000E123D1D94D45300ADFBE7 /* LoginVM.h */,
+				000E123E1D94D45300ADFBE7 /* LoginVM.m */,
+			);
+			path = VModel;
+			sourceTree = "<group>";
+		};
+		000E123F1D94D45300ADFBE7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				000E12401D94D45300ADFBE7 /* model */,
+				000E12411D94D45300ADFBE7 /* VC */,
+				000E12421D94D45300ADFBE7 /* view */,
+				000E12431D94D45300ADFBE7 /* VM */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		000E12401D94D45300ADFBE7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		000E12411D94D45300ADFBE7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				000E12471D94D49300ADFBE7 /* MainViewController.h */,
+				000E12481D94D49300ADFBE7 /* MainViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		000E12421D94D45300ADFBE7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		000E12431D94D45300ADFBE7 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		00B6331B1D936D1D00E794E2 = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +226,7 @@
 		00B633261D936D1E00E794E2 /* CCPStudy */ = {
 			isa = PBXGroup;
 			children = (
-				00B6335E1D936D8500E794E2 /* Login */,
+				000E12331D94D45300ADFBE7 /* classes */,
 				00B6335A1D936D8500E794E2 /* Base */,
 				00B633661D936DF800E794E2 /* Constant */,
 				00C581851D937B4B0066381C /* Resources */,
@@ -201,42 +301,6 @@
 			path = VModel;
 			sourceTree = "<group>";
 		};
-		00B6335E1D936D8500E794E2 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				00C5818C1D937F980066381C /* View */,
-				00B6335F1D936D8500E794E2 /* Model */,
-				00B633601D936D8500E794E2 /* VC */,
-				00B633611D936D8500E794E2 /* VModel */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		00B6335F1D936D8500E794E2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		00B633601D936D8500E794E2 /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				00C581821D9379800066381C /* LoginViewController.h */,
-				00C581831D9379800066381C /* LoginViewController.m */,
-			);
-			path = VC;
-			sourceTree = "<group>";
-		};
-		00B633611D936D8500E794E2 /* VModel */ = {
-			isa = PBXGroup;
-			children = (
-				00C581961D93C0C70066381C /* LoginVM.h */,
-				00C581971D93C0C70066381C /* LoginVM.m */,
-			);
-			path = VModel;
-			sourceTree = "<group>";
-		};
 		00B633661D936DF800E794E2 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,17 +332,9 @@
 			isa = PBXGroup;
 			children = (
 				00C581881D937B720066381C /* first.jpg */,
+				000E124A1D94DD9D00ADFBE7 /* main.jpg */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		00C5818C1D937F980066381C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				00C5818D1D937FA80066381C /* NetView.h */,
-				00C5818E1D937FA80066381C /* NetView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		00C581901D9380E30066381C /* NetFiles */ = {
@@ -419,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00C581891D937B720066381C /* first.jpg in Resources */,
+				000E124B1D94DD9D00ADFBE7 /* main.jpg in Resources */,
 				00B633371D936D1E00E794E2 /* LaunchScreen.storyboard in Resources */,
 				00C5818B1D937C9B0066381C /* Install cocoapods.rtf in Resources */,
 				00B633341D936D1E00E794E2 /* Assets.xcassets in Resources */,
@@ -496,11 +553,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C5818F1D937FA80066381C /* NetView.m in Sources */,
-				00C581841D9379800066381C /* LoginViewController.m in Sources */,
-				00C581981D93C0C70066381C /* LoginVM.m in Sources */,
+				000E12461D94D45300ADFBE7 /* LoginVM.m in Sources */,
 				00B6332C1D936D1E00E794E2 /* AppDelegate.m in Sources */,
+				000E12441D94D45300ADFBE7 /* LoginViewController.m in Sources */,
 				00B633641D936D9700E794E2 /* BaseViewController.m in Sources */,
+				000E12491D94D49300ADFBE7 /* MainViewController.m in Sources */,
+				000E12451D94D45300ADFBE7 /* NetView.m in Sources */,
 				00B633291D936D1E00E794E2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,7 +706,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 268833C5C4DC1BEDF148E147 /* Pods-CCPStudy.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon;
 				DEVELOPMENT_TEAM = 97PS3WYR28;
 				GCC_PREFIX_HEADER = CCPStudy/CCPStudy.pch;
 				INFOPLIST_FILE = CCPStudy/Info.plist;
@@ -663,7 +721,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C08AF1E2302DE5A54229CDA0 /* Pods-CCPStudy.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon;
 				DEVELOPMENT_TEAM = 97PS3WYR28;
 				GCC_PREFIX_HEADER = CCPStudy/CCPStudy.pch;
 				INFOPLIST_FILE = CCPStudy/Info.plist;
