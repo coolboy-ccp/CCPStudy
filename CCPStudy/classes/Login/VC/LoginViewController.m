@@ -10,6 +10,7 @@
 #import "NetView.h"
 #import "LoginVM.h"
 #import "MainViewController.h"
+#import "ExplainView.h"
 
 @interface LoginViewController ()
     
@@ -27,6 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setLBtn];
+    ExplainView *explain = [[ExplainView alloc] initWithFrame:CGRectMake(46, 284, Main_width - 92, 200)];
+    self.vm = [[LoginVM alloc] init];
+    [self.view addSubview:explain];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,13 +45,13 @@
 
 - (void)setLBtn {
     RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[self.accountTextField.rac_textSignal,self.secretTextField.rac_textSignal] reduce:^(NSString *account, NSString *secret){
-        if ((account.length >= 6 && secret.length >= 6)) {
+        if ((account.length > 0 && secret.length > 0)) {
             self.loginBtn.alpha = 1.0;
         }
         else {
             self.loginBtn.alpha = 0.6;
         }
-        return @(account.length >= 6 && secret.length >= 6);
+        return @(account.length > 0 && secret.length > 0);
     }];
     [self btnLayer];
 }
@@ -65,10 +69,9 @@
     
 - (IBAction)LoginBtn:(UIButton *)sender {
     sender.layer.mask.bounds = CGRectMake(0, 0, 100, 34);
-    if (self.vm) {
-        self.vm = nil;
-    }
-    self.vm = [[LoginVM alloc] initWithVC:self];
+    self.vm.account = self.accountTextField.text;
+    self.vm.secret = self.secretTextField.text;
+    [self.vm changeStatusWithView:self];
 }
 
 

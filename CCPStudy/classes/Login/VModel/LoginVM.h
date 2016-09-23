@@ -12,5 +12,5 @@
 @property (nonatomic,strong) NSString *account;
 @property (nonatomic,strong) NSString *secret;
 @property (nonatomic,strong) NSString *loginStatus;
-- (instancetype)initWithVC:(UIViewController *)vc;
+- (void)changeStatusWithView:(UIViewController *)view;
 @end

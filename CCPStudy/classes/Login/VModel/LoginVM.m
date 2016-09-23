@@ -10,13 +10,6 @@
 #import "MainViewController.h"
 
 @implementation LoginVM
-
-- (instancetype)initWithVC:(UIViewController *)vc {
-    if ([super init]) {
-        [self changeStatusWithView:vc];
-    }
-    return self;
-}
     
 -(NSString *)account {
     if (!_account) {
@@ -43,9 +36,18 @@
         });
         if (hud.progress >= 1.0) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                MainViewController *main = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"mainStory"];
-                [view.navigationController pushViewController:main animated:YES];
-                [hud hideAnimated:YES];
+                if ([self.account isEqualToString:@"a1"]) {
+                    MainViewController *main = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"mainStory"];
+                    [view.navigationController pushViewController:main animated:YES];
+                    [hud hideAnimated:YES];
+                }
+                else if ([self.account isEqualToString:@"a2"]) {
+                    
+                }
+                else if ([self.account isEqualToString:@"a3"]) {
+                    
+                }
+                
             });
             
             self.loginStatus = @"seccessfull";
