@@ -36,20 +36,8 @@
         });
         if (hud.progress >= 1.0) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                if ([self.account isEqualToString:@"a1"]) {
-                    MainViewController *main = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"mainStory"];
-                    [view.navigationController pushViewController:main animated:YES];
-                    [hud hideAnimated:YES];
-                }
-                else if ([self.account isEqualToString:@"a2"]) {
-                    
-                }
-                else if ([self.account isEqualToString:@"a3"]) {
-                    
-                }
-                
+                [hud hideAnimated:YES];
             });
-            
             self.loginStatus = @"seccessfull";
             [timer invalidate];
         }

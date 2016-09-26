@@ -30,7 +30,7 @@
 }
 
 - (void)label {
-    NSArray *title = @[@"explain",@"input a1, aaa skip to first",@"input a2, aaa skip to second",@"input a3, aaa skip to third"];
+    NSArray *title = @[@"explain",@"input a1, aaa skip to MainView",@"input a2, aaa skip to MasonryView",@"input a3, aaa skip to third"];
     for (int i = 0; i < title.count; i ++) {
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, 10 + i * 26, self.bounds.size.width - 10, 21)];
         label.textAlignment = NSTextAlignmentLeft;

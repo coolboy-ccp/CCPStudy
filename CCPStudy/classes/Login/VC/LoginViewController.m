@@ -11,6 +11,7 @@
 #import "LoginVM.h"
 #import "MainViewController.h"
 #import "ExplainView.h"
+#import "MasonryViewController.h"
 
 @interface LoginViewController ()
     
@@ -44,18 +45,23 @@
 }
 
 - (void)setLBtn {
-    RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[self.accountTextField.rac_textSignal,self.secretTextField.rac_textSignal] reduce:^(NSString *account, NSString *secret){
-        if ((account.length > 0 && secret.length > 0)) {
+    RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[self.accountTextField.rac_textSignal,self.secretTextField.rac_textSignal] reduce:^id{
+        if (([self judgeAccount])) {
             self.loginBtn.alpha = 1.0;
         }
         else {
             self.loginBtn.alpha = 0.6;
         }
-        return @(account.length > 0 && secret.length > 0);
+        return @([self judgeAccount]);
     }];
     [self btnLayer];
 }
-    
+
+
+- (BOOL)judgeAccount {
+    NSString *ac = self.accountTextField.text;
+    return ([ac isEqualToString:@"a1"] || [ac isEqualToString:@"a2"] || [ac isEqualToString:@"a3"] || [ac isEqualToString:@"a4"]) && [self.secretTextField.text isEqualToString:@"aaa"];
+}
 - (void)btnLayer {
     self.loginBtn.layer.mask = nil;
     CALayer *mLayer = [CALayer layer];
@@ -68,9 +74,27 @@
 }
     
 - (IBAction)LoginBtn:(UIButton *)sender {
+    [self.view endEditing:YES];
     sender.layer.mask.bounds = CGRectMake(0, 0, 100, 34);
-    self.vm.account = self.accountTextField.text;
-    self.vm.secret = self.secretTextField.text;
+    NSString *ac = self.accountTextField.text;
+    [RACObserve(self.vm, loginStatus) subscribeNext:^(NSString *x) {
+        if ([x isEqualToString:@"seccessfull"]) {
+            if ([self isKindOfClass:[LoginViewController class]]) {
+                if ([ac isEqualToString:@"a1"]) {
+                    MainViewController *main = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"mainStory"];
+                    [self.navigationController pushViewController:main animated:YES];
+                }
+                else if ([ac isEqualToString:@"a2"]) {
+                    MasonryViewController *masonry = [[MasonryViewController alloc] init];
+                    [self.navigationController pushViewController:masonry animated:YES];
+                }
+                else if ([ac isEqualToString:@"a3"]) {
+                    
+                }
+            }
+            
+        }
+    }];
     [self.vm changeStatusWithView:self];
 }
 
