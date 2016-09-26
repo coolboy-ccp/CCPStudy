@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0005EAD41D98AF7800ED521B /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0005EAD31D98AF7800ED521B /* MasonryViewController.m */; };
-		0005EAD71D98AF9D00ED521B /* AVFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0005EAD61D98AF9D00ED521B /* AVFoundationViewController.m */; };
+		0005EADE1D98C35700ED521B /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0005EADC1D98C35700ED521B /* MasonryViewController.m */; };
 		000E12441D94D45300ADFBE7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E12381D94D45300ADFBE7 /* LoginViewController.m */; };
 		000E12451D94D45300ADFBE7 /* NetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E123B1D94D45300ADFBE7 /* NetView.m */; };
 		000E12461D94D45300ADFBE7 /* LoginVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E123E1D94D45300ADFBE7 /* LoginVM.m */; };
@@ -49,10 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0005EAD21D98AF7800ED521B /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
-		0005EAD31D98AF7800ED521B /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
-		0005EAD51D98AF9D00ED521B /* AVFoundationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVFoundationViewController.h; sourceTree = "<group>"; };
-		0005EAD61D98AF9D00ED521B /* AVFoundationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVFoundationViewController.m; sourceTree = "<group>"; };
+		0005EADB1D98C35700ED521B /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
+		0005EADC1D98C35700ED521B /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
+		0005EAE01D98C4BC00ED521B /* ExplainMasonry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExplainMasonry.h; sourceTree = "<group>"; };
 		000E12371D94D45300ADFBE7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		000E12381D94D45300ADFBE7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		000E123A1D94D45300ADFBE7 /* NetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetView.h; sourceTree = "<group>"; };
@@ -120,9 +118,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0005EAD81D98C35700ED521B /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				0005EAD91D98C35700ED521B /* model */,
+				0005EADA1D98C35700ED521B /* VC */,
+				0005EADD1D98C35700ED521B /* VM */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		0005EAD91D98C35700ED521B /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0005EADA1D98C35700ED521B /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				0005EADB1D98C35700ED521B /* MasonryViewController.h */,
+				0005EADC1D98C35700ED521B /* MasonryViewController.m */,
+				0005EAE01D98C4BC00ED521B /* ExplainMasonry.h */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		0005EADD1D98C35700ED521B /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		000E12331D94D45300ADFBE7 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				0005EAD81D98C35700ED521B /* Masonry */,
 				000E12341D94D45300ADFBE7 /* Login */,
 				000E123F1D94D45300ADFBE7 /* Main */,
 			);
@@ -199,10 +232,6 @@
 			children = (
 				000E12471D94D49300ADFBE7 /* MainViewController.h */,
 				000E12481D94D49300ADFBE7 /* MainViewController.m */,
-				0005EAD21D98AF7800ED521B /* MasonryViewController.h */,
-				0005EAD31D98AF7800ED521B /* MasonryViewController.m */,
-				0005EAD51D98AF9D00ED521B /* AVFoundationViewController.h */,
-				0005EAD61D98AF9D00ED521B /* AVFoundationViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -577,10 +606,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0005EAD41D98AF7800ED521B /* MasonryViewController.m in Sources */,
 				00423EE01D94FB9A00CEBCFB /* ClipView.m in Sources */,
+				0005EADE1D98C35700ED521B /* MasonryViewController.m in Sources */,
 				000E12461D94D45300ADFBE7 /* LoginVM.m in Sources */,
-				0005EAD71D98AF9D00ED521B /* AVFoundationViewController.m in Sources */,
 				00B6332C1D936D1E00E794E2 /* AppDelegate.m in Sources */,
 				000E12441D94D45300ADFBE7 /* LoginViewController.m in Sources */,
 				00B633641D936D9700E794E2 /* BaseViewController.m in Sources */,

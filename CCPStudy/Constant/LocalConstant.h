@@ -14,6 +14,7 @@
 #define MainScreen_bounds  [UIScreen mainScreen].bounds
 #define Main_width         [UIScreen mainScreen].bounds.size.width
 #define Main_height        [UIScreen mainScreen].bounds.size.height
-
+#define WS(weakSelf)       __weak __typeof(&*self)weakSelf = self
+#define BS(blockSelf)      __block __typeof(&*self)blockSelf = self
 
 #endif /* LocalConstant_h */
