@@ -27,6 +27,14 @@
 		00C581891D937B720066381C /* first.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00C581881D937B720066381C /* first.jpg */; };
 		00C5818B1D937C9B0066381C /* Install cocoapods.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00C5818A1D937C9B0066381C /* Install cocoapods.rtf */; };
 		00C581921D9380E30066381C /* iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html in Resources */ = {isa = PBXBuildFile; fileRef = 00C581911D9380E30066381C /* iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html */; };
+		00D824C11D98FB3800C7758F /* BaseTabbarVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D824BE1D98FB3800C7758F /* BaseTabbarVCViewController.m */; };
+		00D824C21D98FB3800C7758F /* TabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D824C01D98FB3800C7758F /* TabbarButton.m */; };
+		00D824C81D98FDA300C7758F /* MyTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D824C71D98FDA300C7758F /* MyTabBarView.m */; };
+		00D824DC1D9919D400C7758F /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D824DB1D9919D400C7758F /* MusicViewController.m */; };
+		00D824DF1D9919ED00C7758F /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D824DE1D9919ED00C7758F /* PhotoViewController.m */; };
+		00D824E21D9919FF00C7758F /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D824E11D9919FF00C7758F /* QRCodeViewController.m */; };
+		00D824E51D991A1F00C7758F /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D824E41D991A1F00C7758F /* VideoViewController.m */; };
+		00D824E81D991DA600C7758F /* TabNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D824E71D991DA600C7758F /* TabNavViewController.m */; };
 		97A3CAF5BE974C37390C1937 /* Pods_CCPStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9172EA9F8AEC946728CC93DB /* Pods_CCPStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +95,23 @@
 		00C581881D937B720066381C /* first.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = first.jpg; sourceTree = "<group>"; };
 		00C5818A1D937C9B0066381C /* Install cocoapods.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Install cocoapods.rtf"; sourceTree = "<group>"; };
 		00C581911D9380E30066381C /* iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html"; sourceTree = "<group>"; };
+		00D824B51D98EF4300C7758F /* RACStudy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACStudy.h; sourceTree = "<group>"; };
+		00D824BD1D98FB3800C7758F /* BaseTabbarVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabbarVCViewController.h; sourceTree = "<group>"; };
+		00D824BE1D98FB3800C7758F /* BaseTabbarVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabbarVCViewController.m; sourceTree = "<group>"; };
+		00D824BF1D98FB3800C7758F /* TabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarButton.h; sourceTree = "<group>"; };
+		00D824C01D98FB3800C7758F /* TabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarButton.m; sourceTree = "<group>"; };
+		00D824C61D98FDA300C7758F /* MyTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarView.h; sourceTree = "<group>"; };
+		00D824C71D98FDA300C7758F /* MyTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBarView.m; sourceTree = "<group>"; };
+		00D824DA1D9919D400C7758F /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		00D824DB1D9919D400C7758F /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		00D824DD1D9919ED00C7758F /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		00D824DE1D9919ED00C7758F /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		00D824E01D9919FF00C7758F /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		00D824E11D9919FF00C7758F /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		00D824E31D991A1F00C7758F /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		00D824E41D991A1F00C7758F /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		00D824E61D991DA600C7758F /* TabNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabNavViewController.h; sourceTree = "<group>"; };
+		00D824E71D991DA600C7758F /* TabNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabNavViewController.m; sourceTree = "<group>"; };
 		268833C5C4DC1BEDF148E147 /* Pods-CCPStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCPStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCPStudy/Pods-CCPStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		9172EA9F8AEC946728CC93DB /* Pods_CCPStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCPStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08AF1E2302DE5A54229CDA0 /* Pods-CCPStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCPStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCPStudy/Pods-CCPStudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +180,7 @@
 		000E12331D94D45300ADFBE7 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				00D824C91D9919BC00C7758F /* AVFoundation */,
 				0005EAD81D98C35700ED521B /* Masonry */,
 				000E12341D94D45300ADFBE7 /* Login */,
 				000E123F1D94D45300ADFBE7 /* Main */,
@@ -185,6 +211,7 @@
 			children = (
 				000E12371D94D45300ADFBE7 /* LoginViewController.h */,
 				000E12381D94D45300ADFBE7 /* LoginViewController.m */,
+				00D824B51D98EF4300C7758F /* RACStudy.h */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -339,6 +366,7 @@
 		00B6335C1D936D8500E794E2 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				00D824BC1D98FB3800C7758F /* Tabbar */,
 				00B633621D936D9700E794E2 /* BaseViewController.h */,
 				00B633631D936D9700E794E2 /* BaseViewController.m */,
 			);
@@ -395,6 +423,164 @@
 				00C581911D9380E30066381C /* iOS开发UI篇—CAlayer（自定义layer） - 文顶顶 - 博客园.html */,
 			);
 			path = NetFiles;
+			sourceTree = "<group>";
+		};
+		00D824BC1D98FB3800C7758F /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				00D824BD1D98FB3800C7758F /* BaseTabbarVCViewController.h */,
+				00D824BE1D98FB3800C7758F /* BaseTabbarVCViewController.m */,
+				00D824BF1D98FB3800C7758F /* TabbarButton.h */,
+				00D824C01D98FB3800C7758F /* TabbarButton.m */,
+				00D824C61D98FDA300C7758F /* MyTabBarView.h */,
+				00D824C71D98FDA300C7758F /* MyTabBarView.m */,
+				00D824E61D991DA600C7758F /* TabNavViewController.h */,
+				00D824E71D991DA600C7758F /* TabNavViewController.m */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		00D824C91D9919BC00C7758F /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				00D824CA1D9919BC00C7758F /* Music */,
+				00D824CE1D9919BC00C7758F /* Photo */,
+				00D824D21D9919BD00C7758F /* QRCode */,
+				00D824D61D9919BD00C7758F /* Video */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		00D824CA1D9919BC00C7758F /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				00D824CB1D9919BC00C7758F /* Model */,
+				00D824CC1D9919BC00C7758F /* VC */,
+				00D824CD1D9919BC00C7758F /* VM */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		00D824CB1D9919BC00C7758F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00D824CC1D9919BC00C7758F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				00D824DA1D9919D400C7758F /* MusicViewController.h */,
+				00D824DB1D9919D400C7758F /* MusicViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		00D824CD1D9919BC00C7758F /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		00D824CE1D9919BC00C7758F /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				00D824CF1D9919BC00C7758F /* Model */,
+				00D824D01D9919BC00C7758F /* VC */,
+				00D824D11D9919BD00C7758F /* VM */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		00D824CF1D9919BC00C7758F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00D824D01D9919BC00C7758F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				00D824DD1D9919ED00C7758F /* PhotoViewController.h */,
+				00D824DE1D9919ED00C7758F /* PhotoViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		00D824D11D9919BD00C7758F /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		00D824D21D9919BD00C7758F /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				00D824D31D9919BD00C7758F /* Model */,
+				00D824D41D9919BD00C7758F /* VC */,
+				00D824D51D9919BD00C7758F /* VM */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		00D824D31D9919BD00C7758F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00D824D41D9919BD00C7758F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				00D824E01D9919FF00C7758F /* QRCodeViewController.h */,
+				00D824E11D9919FF00C7758F /* QRCodeViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		00D824D51D9919BD00C7758F /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		00D824D61D9919BD00C7758F /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				00D824D71D9919BD00C7758F /* Model */,
+				00D824D81D9919BD00C7758F /* VC */,
+				00D824D91D9919BD00C7758F /* VM */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		00D824D71D9919BD00C7758F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00D824D81D9919BD00C7758F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				00D824E31D991A1F00C7758F /* VideoViewController.h */,
+				00D824E41D991A1F00C7758F /* VideoViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		00D824D91D9919BD00C7758F /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VM;
 			sourceTree = "<group>";
 		};
 		136A8E2C721AC4E527434084 /* Frameworks */ = {
@@ -607,15 +793,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				00423EE01D94FB9A00CEBCFB /* ClipView.m in Sources */,
+				00D824C21D98FB3800C7758F /* TabbarButton.m in Sources */,
+				00D824E81D991DA600C7758F /* TabNavViewController.m in Sources */,
+				00D824DC1D9919D400C7758F /* MusicViewController.m in Sources */,
 				0005EADE1D98C35700ED521B /* MasonryViewController.m in Sources */,
 				000E12461D94D45300ADFBE7 /* LoginVM.m in Sources */,
 				00B6332C1D936D1E00E794E2 /* AppDelegate.m in Sources */,
 				000E12441D94D45300ADFBE7 /* LoginViewController.m in Sources */,
+				00D824C81D98FDA300C7758F /* MyTabBarView.m in Sources */,
 				00B633641D936D9700E794E2 /* BaseViewController.m in Sources */,
+				00D824DF1D9919ED00C7758F /* PhotoViewController.m in Sources */,
 				00423EE51D950DA000CEBCFB /* ExplainView.m in Sources */,
 				000E12491D94D49300ADFBE7 /* MainViewController.m in Sources */,
 				000E12451D94D45300ADFBE7 /* NetView.m in Sources */,
 				00B633291D936D1E00E794E2 /* main.m in Sources */,
+				00D824E51D991A1F00C7758F /* VideoViewController.m in Sources */,
+				00D824E21D9919FF00C7758F /* QRCodeViewController.m in Sources */,
+				00D824C11D98FB3800C7758F /* BaseTabbarVCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "MainViewController.h"
 #import "ExplainView.h"
 #import "MasonryViewController.h"
+#import "BaseTabbarVCViewController.h"
 
 @interface LoginViewController ()
     
@@ -89,7 +90,8 @@
                     [self.navigationController pushViewController:masonry animated:YES];
                 }
                 else if ([ac isEqualToString:@"a3"]) {
-                    
+                    BaseTabbarVCViewController *tab = [[BaseTabbarVCViewController alloc] init];
+                    [self.navigationController pushViewController:tab animated:YES];
                 }
             }
             

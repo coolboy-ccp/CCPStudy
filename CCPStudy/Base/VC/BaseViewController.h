@@ -10,4 +10,6 @@
 
 @interface BaseViewController : UIViewController
 
+- (void)createNavWithTitle:(NSString *)title andBackColor:(UIColor *)color;
+
 @end
