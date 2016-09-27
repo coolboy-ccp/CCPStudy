@@ -13,6 +13,8 @@
 		000E12461D94D45300ADFBE7 /* LoginVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E123E1D94D45300ADFBE7 /* LoginVM.m */; };
 		000E12491D94D49300ADFBE7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E12481D94D49300ADFBE7 /* MainViewController.m */; };
 		000E124B1D94DD9D00ADFBE7 /* main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 000E124A1D94DD9D00ADFBE7 /* main.jpg */; };
+		001CDB0D1D9A420E00BDD8BD /* VideoVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 001CDB0C1D9A420E00BDD8BD /* VideoVM.m */; };
+		001CDB111D9A561600BDD8BD /* StartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 001CDB101D9A561600BDD8BD /* StartButton.m */; };
 		00423EE01D94FB9A00CEBCFB /* ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00423EDF1D94FB9A00CEBCFB /* ClipView.m */; };
 		00423EE21D94FDE900CEBCFB /* main1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00423EE11D94FDE900CEBCFB /* main1.jpg */; };
 		00423EE51D950DA000CEBCFB /* ExplainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00423EE41D950DA000CEBCFB /* ExplainView.m */; };
@@ -68,6 +70,10 @@
 		000E12471D94D49300ADFBE7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		000E12481D94D49300ADFBE7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		000E124A1D94DD9D00ADFBE7 /* main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main.jpg; sourceTree = "<group>"; };
+		001CDB0B1D9A420E00BDD8BD /* VideoVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoVM.h; sourceTree = "<group>"; };
+		001CDB0C1D9A420E00BDD8BD /* VideoVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoVM.m; sourceTree = "<group>"; };
+		001CDB0F1D9A561600BDD8BD /* StartButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartButton.h; sourceTree = "<group>"; };
+		001CDB101D9A561600BDD8BD /* StartButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartButton.m; sourceTree = "<group>"; };
 		00423EDE1D94FB9A00CEBCFB /* ClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipView.h; sourceTree = "<group>"; };
 		00423EDF1D94FB9A00CEBCFB /* ClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipView.m; sourceTree = "<group>"; };
 		00423EE11D94FDE900CEBCFB /* main1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main1.jpg; sourceTree = "<group>"; };
@@ -277,6 +283,15 @@
 			children = (
 			);
 			path = VM;
+			sourceTree = "<group>";
+		};
+		001CDB0E1D9A55FC00BDD8BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				001CDB0F1D9A561600BDD8BD /* StartButton.h */,
+				001CDB101D9A561600BDD8BD /* StartButton.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		00B6331B1D936D1D00E794E2 = {
@@ -553,6 +568,7 @@
 		00D824D61D9919BD00C7758F /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				001CDB0E1D9A55FC00BDD8BD /* View */,
 				00D824D71D9919BD00C7758F /* Model */,
 				00D824D81D9919BD00C7758F /* VC */,
 				00D824D91D9919BD00C7758F /* VM */,
@@ -579,6 +595,8 @@
 		00D824D91D9919BD00C7758F /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				001CDB0B1D9A420E00BDD8BD /* VideoVM.h */,
+				001CDB0C1D9A420E00BDD8BD /* VideoVM.m */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -797,6 +815,7 @@
 				00D824E81D991DA600C7758F /* TabNavViewController.m in Sources */,
 				00D824DC1D9919D400C7758F /* MusicViewController.m in Sources */,
 				0005EADE1D98C35700ED521B /* MasonryViewController.m in Sources */,
+				001CDB0D1D9A420E00BDD8BD /* VideoVM.m in Sources */,
 				000E12461D94D45300ADFBE7 /* LoginVM.m in Sources */,
 				00B6332C1D936D1E00E794E2 /* AppDelegate.m in Sources */,
 				000E12441D94D45300ADFBE7 /* LoginViewController.m in Sources */,
@@ -805,6 +824,7 @@
 				00D824DF1D9919ED00C7758F /* PhotoViewController.m in Sources */,
 				00423EE51D950DA000CEBCFB /* ExplainView.m in Sources */,
 				000E12491D94D49300ADFBE7 /* MainViewController.m in Sources */,
+				001CDB111D9A561600BDD8BD /* StartButton.m in Sources */,
 				000E12451D94D45300ADFBE7 /* NetView.m in Sources */,
 				00B633291D936D1E00E794E2 /* main.m in Sources */,
 				00D824E51D991A1F00C7758F /* VideoViewController.m in Sources */,

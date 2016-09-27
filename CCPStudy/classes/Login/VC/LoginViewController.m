@@ -58,7 +58,6 @@
     [self btnLayer];
 }
 
-
 - (BOOL)judgeAccount {
     NSString *ac = self.accountTextField.text;
     return ([ac isEqualToString:@"a1"] || [ac isEqualToString:@"a2"] || [ac isEqualToString:@"a3"] || [ac isEqualToString:@"a4"]) && [self.secretTextField.text isEqualToString:@"aaa"];
@@ -99,8 +98,6 @@
     }];
     [self.vm changeStatusWithView:self];
 }
-
-
 
 - (IBAction)searchNet:(UIButton *)sender {
     [GLobalRealReachability startNotifier];
